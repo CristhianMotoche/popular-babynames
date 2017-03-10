@@ -6,7 +6,10 @@ def get_baby_names_by_range(init_year, finish_year):
     results = []
 
     for year in range(init_year, finish_year):
-        results.append(get_baby_names_by_year(year))
+        result = {}
+        result['year'] = year
+        result['baby_names'] = get_baby_names_by_year(year)
+        results.append(result)
 
     return results
 
@@ -33,6 +36,4 @@ def get_data_from_row(row):
             , 'girl_name': cells[3].text
             , 'number_of_girls': cells[4].text
             }
-
-print(len(get_baby_names_by_range(1880, 2017)))
 
