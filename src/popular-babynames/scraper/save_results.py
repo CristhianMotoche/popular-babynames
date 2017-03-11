@@ -1,10 +1,3 @@
-from pymongo import MongoClient
-
-def get_collection(host, port, db, collection):
-    client = MongoClient(host, port)
-    db = client[db]
-    return db[collection]
-
 def save_results(collection, results):
     for result in results:
         save_result(collection, result)
@@ -16,4 +9,3 @@ def save_result(collection, result):
     for baby_name in baby_names:
         baby_name['year'] = year
         collection.insert_one(baby_name)
-

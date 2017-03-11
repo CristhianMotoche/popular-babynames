@@ -1,3 +1,5 @@
+from utils.config import read_config
+
 def main():
     config = read_config()
     collection = connect_collection(config)
@@ -13,14 +15,6 @@ def main():
             print(":q Quit")
         else:
             pass
-
-def read_config():
-    config = { 'host' : os.environ['HOST']
-            , 'port' : int(os.environ['PORT'])
-            , 'db' : so.environ['DB']
-            , 'collection' : so.environ['COLLECTION']
-            }
-    return config
 
 if __name__ == "__main__":
     main()
