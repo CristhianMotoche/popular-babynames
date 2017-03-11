@@ -11,7 +11,7 @@ config = {
     'author_email': 'cristhian.motoche@gmail.com',
     'version': '0.1',
     'install_requires': [],
-    'packages': ['popular-babynames'],
+    'packages': ['src/popular-babynames', 'src/cli', 'src/plot'],
     'scripts': [],
     'name': 'Popular Babynames'
 }
